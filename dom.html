@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Example</title>
+</head>
+<body>
+  <h1 id="heading">Hello, DOM!</h1>
+  <input id="name" placeholder="Enter your name">
+  <button id="btn">Click Me</button>
+  <ul id="list">
+    <li>Item 1</li>
+  </ul>
+
+  <script>
+    let heading = document.getElementById("heading");
+    let input = document.getElementById("name");
+    let btn = document.getElementById("btn");
+    let list = document.getElementById("list");
+
+    btn.addEventListener("click", function() {
+      heading.innerText = "Welcome " + input.value;
+      let li = document.createElement("li");
+      li.innerText = input.value;
+      list.appendChild(li);
+      input.value = "";
+    });
+  </script>
+</body>
+</html>
