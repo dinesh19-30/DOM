@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Example</title>
+</head>
+<body>
+  <h1 id="title">Hello DOM!</h1>
+  <p id="desc">This is a paragraph.</p>
+  <button id="btn">Change Content</button>
+  <script>
+    let heading = document.getElementById("title");
+    let paragraph = document.getElementById("desc");
+    let button = document.getElementById("btn");
+
+    button.addEventListener("click", function() {
+      heading.innerText = "DOM Changed!";
+      paragraph.innerHTML = "<b>The content was updated using DOM.</b>";
+      paragraph.style.color = "blue";
+      paragraph.style.fontSize = "20px";
+    });
+  </script>
+</body>
+</html>
